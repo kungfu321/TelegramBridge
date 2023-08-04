@@ -60,6 +60,7 @@ func main() {
 		// should be defined in the action.yml
 		token  = os.Getenv("INPUT_TOKEN")
 		chat   = os.Getenv("INPUT_CHAT")
+		thread = os.Getenv("INPUT_THREAD")
 		status = os.Getenv("INPUT_STATUS")
 		event  = os.Getenv("INPUT_EVENT")
 		actor  = os.Getenv("INPUT_ACTOR")
@@ -71,7 +72,7 @@ func main() {
 	)
 
 	// Create Telegram client using token
-	c := tbot.NewClient(token, http.DefaultClient, "https://api.telegram.org")
+	c := tbot.NewClient(token, http.DefaultClient, "https://api.telegram.org", thread)
 
 	// link to the commit
 	link := linkgen(repo, event)
