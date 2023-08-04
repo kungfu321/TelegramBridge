@@ -12,7 +12,7 @@ inputs:
     required: True
   thread: 
     description: 'Telegram thread id'
-    default: # ${{ secrets.token }}
+    default: # ${{ secrets.thread }}
     required: True
   status: 
     description: 'Job status'
