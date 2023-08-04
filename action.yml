@@ -10,6 +10,10 @@ inputs:
     description: 'Telegram Bot token/add to secrets'
     default: # ${{ secrets.token }}
     required: True
+  thread: 
+    description: 'Telegram thread id'
+    default: # ${{ secrets.token }}
+    required: True
   status: 
     description: 'Job status'
     default: ${{ job.status }}
